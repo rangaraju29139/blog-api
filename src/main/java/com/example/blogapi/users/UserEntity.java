@@ -1,2 +1,14 @@
-package com.example.blogapi.users;public class UserEntity {
+package com.example.blogapi.users;
+
+import jakarta.persistence.*;
+
+import java.util.UUID;
+
+
+@Entity(name = "users")
+public class UserEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(nullable = false)
+    UUID id;
 }
